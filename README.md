@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Calcutip Video Walkthrough' width='' alt='Calcutip Video Walkthrough' />
+<img src='http://i.imgur.com/zUql9Jy.gif' title='Calcutip Video Walkthrough' width='' alt='Calcutip Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
