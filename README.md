@@ -21,23 +21,28 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Updated Settings from text to unicode gear icon
 - [x] Launch screen with image and title
 - [x] Calculating the remembered bill amount immediately on launch
 - [x] Added split functionality for up to 4 people
 - [x] Remembering the tip percentage and split 
+- [x] Reset Settings for tip and split
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Calcutip Video Walkthrough' width='' alt='Calcutip Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+- I came across some design challenges. Since only basic guidelines were provided, I was trying to think of ways to make the functions seem more interesting without making the app look too bare.
+- Testing on different iPhone models as well as iPad sometimes yielded unexpected results for the UI. However, since this was developed primarily as an iPhone app, I didn't expect the design to transfer over to iPad easily anyway, but I did make some UI adjustments for the large iPhone sizes.
+- Rather than using the user defaults standards to save data across different view controllers, I experimented with passing data in other ways, such as using global variables. Since this is a multi-thread environment, this way sometimes worked but sometimes didn't.
+
 
 ## License
 

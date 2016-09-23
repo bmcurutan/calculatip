@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TipViewController.swift
 //  calculatip
 //
 //  Created by Bianca Curutan on 9/22/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TipViewController: UIViewController {
     
     var defaults = UserDefaults.standard
     
