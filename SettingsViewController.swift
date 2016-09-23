@@ -16,17 +16,15 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Settings"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipControlIndex")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func onChange(_ sender: AnyObject) {
@@ -34,14 +32,9 @@ class SettingsViewController: UIViewController {
         defaults.synchronize()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onPress(_ sender: AnyObject) {
+        defaults.set(0, forKey: "tipControlIndex")
+        defaults.set(0, forKey: "splitControlIndex")
+        defaults.synchronize()
     }
-    */
-
 }
