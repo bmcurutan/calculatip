@@ -29,22 +29,21 @@ class ViewController: UIViewController {
         settingsButton.title = "\u{2699}"
         settingsButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Helvetica", size: 28)!], for: UIControlState.normal)
         
+        UIView.animate(withDuration: 1, animations: {
+            self.billField.alpha = 0.7
+        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // Set remembered fields
         billField.text = defaults.string(forKey: "billAmount")
         tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipControlIndex")
         splitControl.selectedSegmentIndex = defaults.integer(forKey: "splitControlIndex")
         
-        UIView.animate(withDuration: 1, animations: {
-            self.billField.alpha = 0.7
-        })
-        
         calcTip()
         calcSplit()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tipControl.selectedSegmentIndex = defaults.integer(forKey: "tipControlIndex")
     }
     
     override func viewDidAppear(_ animated: Bool) {
