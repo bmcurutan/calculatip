@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.tintColor = UIColor.white
-        navigationBarAppearance.barTintColor = UIColor(red:0.00, green:0.59, blue:0.53, alpha:1.0)
+        let defaults = UserDefaults.standard
+        navigationBarAppearance.barTintColor = defaults.bool(forKey: "greyOn") ? UIColor(red:0.259, green:0.259, blue:0.259, alpha:1.0) : UIColor(red:0.00, green:0.59, blue:0.53, alpha:1.0)
         let attributes = [
             NSForegroundColorAttributeName: UIColor.white,
             NSFontAttributeName: UIFont(name: "Helvetica", size: 22)!
