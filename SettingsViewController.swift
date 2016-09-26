@@ -25,6 +25,9 @@ class SettingsViewController: UIViewController {
         super.viewWillAppear(animated)
         let greyOn = defaults.bool(forKey: "greyOn")
         greySwitch.isOn = greyOn
+        
+        // Update colours
+        self.navigationController?.navigationBar.barTintColor = greyOn ? UIColor(red:0.259, green:0.259, blue:0.259, alpha:1.0) : UIColor(red:0.00, green:0.59, blue:0.53, alpha:1.0)
         greySwitch.tintColor = greyOn ? UIColor(red:0.459, green:0.459, blue:0.459, alpha:1.0) : UIColor(red: 1, green:0.757, blue:0.027, alpha:1.0)
         tipControl.tintColor = greyOn ? UIColor(red:0.459, green:0.459, blue:0.459, alpha:1.0) : UIColor(red: 1, green:0.757, blue:0.027, alpha:1.0)
         resetButton.setTitleColor(greyOn ? UIColor.black : UIColor(red: 0, green:0.475, blue:0.42, alpha:1.0), for: UIControlState.normal)

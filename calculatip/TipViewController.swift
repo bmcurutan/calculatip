@@ -52,6 +52,7 @@ class TipViewController: UIViewController {
         
         // Update colours
         let greyOn = defaults.bool(forKey: "greyOn")
+        self.navigationController?.navigationBar.barTintColor = greyOn ? UIColor(red:0.259, green:0.259, blue:0.259, alpha:1.0) : UIColor(red:0.00, green:0.59, blue:0.53, alpha:1.0)
         view.backgroundColor = greyOn ? UIColor(red:0.741, green:0.741, blue:0.741, alpha:1.0) : UIColor(red:0.70, green:0.87, blue:0.86, alpha:1.0)
         billField.textColor = greyOn ? UIColor.black : UIColor(red: 0.459, green:0.459, blue:0.459, alpha:1.0)
         tipControl.tintColor = greyOn ? UIColor(red:0.459, green:0.459, blue:0.459, alpha:1.0) : UIColor(red: 1, green:0.757, blue:0.027, alpha:1.0)
